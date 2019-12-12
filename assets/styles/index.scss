@@ -1,1 +1,57 @@
 @import '~bootstrap/scss/bootstrap';
+
+.after-auth {
+  display: none;
+}
+.container {
+  display: none;
+}
+
+.center {
+  margin: center;
+  background-color: green;
+  color: white;
+  font-size: 2em;
+}
+
+p {
+  font-size: 4em;
+}
+
+$alt-color: $cyan;
+$body-bg-color: $gray-200;
+$font-color: $light;
+
+body {
+  background-color: $body-bg-color;
+  // background-image: url(https://imgur.com/N9OHXB5);
+  margin: auto;
+  // max-width: 50;
+}
+
+.box {
+  align-items: center;
+  // background-color: $secondary;
+  border: 1px solid $white;
+  color: $font-color;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+
+.alt-color {
+  background-color: $alt-color;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 300px
+  }
+}
+
+.board {
+  margin: 0px auto;
+  max-height: calc(100vh - 75px);
+  max-width: calc(100vh - 75px);
+  background-image: url(https://www.disneytouristblog.com/wp-content/uploads/2012/01/DSC_4287-copy-1024x744.jpg);
+}
