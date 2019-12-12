@@ -28,7 +28,7 @@ const onSigninSuccess = responseData => {
   store.user = responseData.user
   onSuccess('You successfully sign in!')
   $('.after-auth').show()
-  $('.before-auth').hide()
+  // $('.before-auth').hide()
   $('#gameMessage').text('')
   $('#gameMessage').show()
 }
@@ -47,10 +47,10 @@ const onChangePasswordFailure = () => {
 const onSignoutSuccess = responseData => {
   store.user = {} // the store no longer know who we are.
   onSuccess('You successfully signed out!')
-  $('.after-auth').hide()
+  // $('.after-auth').hide()
   $('.before-auth').show()
-  $('.container').hide()
-  $('#gameMessage').hide()
+  // $('.container').hide()
+  // $('#gameMessage').hide()
 }
 const onSignoutFailure = () => {
   onFailure('Sign out failed')
