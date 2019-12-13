@@ -22,7 +22,7 @@
           <button class="btn btn-primary">Submit</button>
         </form>
 
-        <div id="message2"></div>
+        <div id="message"></div>
         <h2> Sign In</h2>
         <form id="sign-in">
           <input type="email" name="credentials[email]" placeholder="email">
@@ -48,10 +48,41 @@
         </section>
 
         <section class="after-auth">
-          <h2>Let's Play</h2>
+          <h2>What's your favorite car?</h2>
           <form id="create">
             <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
-            <button class="btn btn-primary">PLAY</button>
+            <input type="text" name="favcar[name]" placeholder="e.g. Ford Mustang">
+            <input type="text" name="favcar[year]" placeholder="e.g. 2018">
+            <button class="btn btn-primary">Submit</button>
+          </form>
+        </section>
+
+        <div id="carMessage"></div>
+        <section class="after-auth">
+          <h2>Show all my fav cars</h2>
+          <form id="index">
+            <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
+            <button class="btn btn-primary">SHOW</button>
+          </form>
+        </section>
+
+        <div id="carMessage"></div>
+        <section class="after-auth">
+          <h2>Change my Fav car</h2>
+          <form id="change-car">
+            <input type="number" name="favcar[id]" placeholder="favorite car ID">
+            <input type="text" name="favcar[name]" placeholder="new car name">
+            <input type="text" name="favcar[year]" placeholder="new year">
+            <button class="btn btn-primary">Submit</button>
+          </form>
+        </section>
+
+        <div id="carMessage"></div>
+        <section class="after-auth">
+          <h2>Delete a Fav car</h2>
+          <form id="delete-car">
+            <input type="number" name="favcar[id]" placeholder="favorite car ID">
+            <button class="btn btn-primary">Submit</button>
           </form>
         </section>
     </body>

@@ -3,6 +3,7 @@ const config = require('../config')
 const store = require('../store')
 
 const signUp = formData => {
+  console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
@@ -11,6 +12,7 @@ const signUp = formData => {
 }
 
 const signIn = formData => {
+  console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
