@@ -3,9 +3,9 @@
 .after-auth {
   display: none;
 }
-.container {
-  display: none;
-}
+// .container {
+//   display: none;
+// }
 
 .center {
   margin: center;
@@ -29,29 +29,29 @@ body {
   // max-width: 50;
 }
 
-.box {
-  align-items: center;
-  // background-color: $secondary;
-  border: 1px solid $white;
-  color: $font-color;
-  display: flex;
-  height: 80px;
-  justify-content: center;
-}
+// .box {
+//   align-items: center;
+//   // background-color: $secondary;
+//   border: 1px solid $white;
+//   color: $font-color;
+//   display: flex;
+//   height: 80px;
+//   justify-content: center;
+// }
 
 .alt-color {
   background-color: $alt-color;
 }
 
-@media (max-width: 600px) {
-  .container {
-    max-width: 300px
-  }
-}
+// @media (max-width: 600px) {
+//   .container {
+//     max-width: 300px
+//   }
+// }
 
-.board {
-  margin: 0px auto;
-  max-height: calc(100vh - 75px);
-  max-width: calc(100vh - 75px);
-  background-image: url(https://www.disneytouristblog.com/wp-content/uploads/2012/01/DSC_4287-copy-1024x744.jpg);
-}
+// .board {
+//   margin: 0px auto;
+//   max-height: calc(100vh - 75px);
+//   max-width: calc(100vh - 75px);
+//   background-image: url(https://www.disneytouristblog.com/wp-content/uploads/2012/01/DSC_4287-copy-1024x744.jpg);
+// }
