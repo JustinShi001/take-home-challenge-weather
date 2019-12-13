@@ -1,0 +1,31 @@
+{{#each favcars as |favcar|}}
+  {{log favcar}}
+  <section data-id="{{favcar.id}}">
+    <!-- {{printSomething}} -->
+    <!-- // printSomething is a helper defined in the helper folder "printSomething" file
+    // don't need the require function here. It's handled by "Webpack" -->
+    <h6>Name: {{favcar.name}}</h6>
+    <h6>Year: {{favcar.year}}</h6>
+    <h6>ID: {{favcar.id}}</h6>
+    <h3>
+    </h3>
+
+    <h3>
+    </h3>
+    <!-- <h6>Year:</h6>
+    <h3>
+      <! {{#if book.author}} -->
+        <!-- {{favcar.year}} -->
+      <!-- {{else}}
+        No author provided.
+      {{/if}} -->
+    <!-- </h3> -->
+    <!-- {{> partial}}
+    {{#if editable}}
+    <! using editable to check if the user is allowed to edit this field -->
+    <!-- <button data-id="{{book.id}}" class="btn btn-danger delete-btn">Remove Book</button> -->
+    <!-- {{/if}} -->
+<!-- Repeat the data-id here, though not DRY, it makes DOM traversing faster -->
+  </section>
+
+{{/each}}
