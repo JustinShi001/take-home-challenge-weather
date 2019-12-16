@@ -40,7 +40,7 @@ const onSignOut = function (event) {
 
   api.signOut()
     .then((res) => {
-      console.log('server sent back sign out response', res)
+      // console.log('server sent back sign out response', res)
     })
     // res.user // throw an error: no user property on undefined
     .then(ui.onSignoutSuccess)

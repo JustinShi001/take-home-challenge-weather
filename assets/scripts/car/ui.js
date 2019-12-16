@@ -54,7 +54,7 @@ const onCreateFailure = (response) => {
 
 const onIndexSuccess = (response) => {
   store.favcars = response.favcars
-  console.log(response)
+  // console.log(response)
   $('.content').show()
   const showFavcarHtml = showFavcarTemplate({ favcars: response.favcars })
   $('.content').html(showFavcarHtml)

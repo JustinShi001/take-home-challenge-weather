@@ -4,7 +4,7 @@ const store = require('../store')
 const config = require('../config')
 
 const createApp = formData => {
-  console.log(formData)
+  // console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/appointments',
     method: 'POST',
@@ -16,7 +16,7 @@ const createApp = formData => {
 }
 
 const indexApp = formData => {
-  console.log(store.appointments)
+  // console.log(store.appointments)
   return $.ajax({
     url: config.apiUrl + '/appointments',
     method: 'GET',
@@ -28,7 +28,7 @@ const indexApp = formData => {
 }
 
 const updateApp = formData => {
-  console.log(formData)
+  // console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/appointments' + '/' + formData.appointment.id,
     method: 'PATCH',
@@ -37,7 +37,7 @@ const updateApp = formData => {
   })
 }
 const destroyApp = formData => {
-  console.log(formData)
+  // console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/appointments' + '/' + formData.appointment.id,
     method: 'DELETE',

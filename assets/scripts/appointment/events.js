@@ -17,7 +17,7 @@ const onCreateApp = event => {
 
 const onIndexApp = event => {
   event.preventDefault()
-  console.log('onIndexApp')
+  // console.log('onIndexApp')
   api.indexApp()
     .then(ui.onAppIndexSuccess)
     .catch(ui.onAppIndexFailure)

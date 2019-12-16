@@ -22,7 +22,7 @@ const onAppFailure = appointmentMessage => {
 const onAppCreateSuccess = (response) => {
   store.appointment = response.appointment
   onAppSuccess('You successfully created an appointment!')
-  console.log(response)
+  // console.log(response)
   $('.container').show()
   // $('p').remove()
   $('.box').addClass('alt-color')
@@ -33,7 +33,7 @@ const onAppCreateFailure = (response) => {
 
 const onAppIndexSuccess = (response) => {
   store.appointments = response.appointments
-  console.log(store.appointments)
+  // console.log(store.appointments)
   $('.content2').show()
   const showAppointmentHtml = showAppointmentTemplate({ appointments: response.appointments })
   $('.content2').html(showAppointmentHtml)
@@ -42,7 +42,7 @@ const onAppIndexFailure = (response) => {
   onAppFailure('Rut roh... somgthing went wrong! try again')
 }
 const onAppUpdateSuccess = (response) => {
-  console.log(response)
+  // console.log(response)
   store.appointment = response.appointment
   onAppSuccess('Your updated an appointment!')
   $('.content').hide()
