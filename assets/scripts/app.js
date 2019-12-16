@@ -8,7 +8,9 @@
 
 const authEvents = require('./auth/events')
 const carEvents = require('./car/events')
+const appointmentEvents = require('./appointment/events')
 $(() => {
   authEvents.addHandlers()
   carEvents.addHandlers()
+  appointmentEvents.addHandlers()
 })

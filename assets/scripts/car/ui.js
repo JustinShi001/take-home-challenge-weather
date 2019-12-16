@@ -55,13 +55,6 @@ const onCreateFailure = (response) => {
 const onIndexSuccess = (response) => {
   store.favcars = response.favcars
   console.log(response)
-  // onSuccess()
-  // const array = []
-  // for (let i = 0; i < store.favcars.length; i++) {
-  //   array.push([store.favcars[i].name, store.favcars[i].year])
-  // }
-  // console.log(array)
-  // onSuccess(array)
   $('.content').show()
   const showFavcarHtml = showFavcarTemplate({ favcars: response.favcars })
   $('.content').html(showFavcarHtml)
@@ -77,7 +70,7 @@ const onIndexFailure = (response) => {
 //   onFailure('Rut roh... somgthing went wrong! try again')
 // }
 const onUpdateSuccess = (response) => {
-  console.log(response)
+  // console.log(response)
   store.favcar = response.favcar
   onSuccess('Your updated one of your favorite car!')
   $('.content').hide()
