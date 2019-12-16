@@ -88,6 +88,7 @@ const onUpdateFailure = (response) => {
 
 const onDestroySuccess = (response) => {
   onSuccess('Your just destroyed one of your favorite car!')
+  $('.content').hide()
 }
 const onDestroyFailure = (response) => {
   onFailure('Rut roh... somgthing went wrong! try again')
