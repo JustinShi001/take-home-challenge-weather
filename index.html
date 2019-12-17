@@ -14,7 +14,11 @@
     </head>
     <body>
 
-      <h1>What's your favorite car?</h1>
+      <h3 class="float-right">
+      </h3>
+      <h1>What's your favorite car?
+      </h1>
+
       <!-- <div class="nav-buttons">
         <button id="getBooksButton" class="btn btn-info mr-2">Get Books!</button>
         <button id="clearBooksButton" class="btn btn-outline-info">Clear Books!</button>
@@ -98,7 +102,7 @@
         </div>
 
         <!-- Make an appointment section -->
-        <div class="col-6 col-md-6">
+        <div class="col-6 col-md-6 border">
         <section class="after-auth">
           <!-- class .text-center -->
           <!-- <h2>What's your favorite car?</h2> -->
@@ -128,7 +132,7 @@
           <h2>Change an appointment</h2>
           <form id="change_appointment">
             <input type="text" name="appointment[id]" placeholder="appointment_id">
-            <input type="text" name="appointment[date]" placeholder="e.g. 2020-01-01">
+            <input type="text" name="appointment[date]" placeholder="date, e.g. 2020-01-01">
             <input type="text" name="appointment[user_id]" placeholder="user_id">
             <input type="text" name="appointment[dealer_id]" placeholder="dealer_id">
             <button class="btn btn-primary">Change</button>
@@ -139,7 +143,7 @@
         <section class="after-auth">
           <h2>Delete an appointment</h2>
           <form id="delete_appointment">
-            <input type="number" name="appointment[id]" placeholder="appointment ID">
+            <input type="number" name="appointment[id]" placeholder="appointment_id">
             <button class="btn btn-danger">Delete</button>
           </form>
         </section>
