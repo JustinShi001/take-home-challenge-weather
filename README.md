@@ -1,4 +1,20 @@
-# Full-Stack Project Notes
+# Full-Stack Project Readme
+
+Link to the Rails API on github:
+https://github.com/JustinShi001/heroku_test
+
+## What the app does
+It's a favorite car web app that allows users to create, view and update their favorite cars.
+It also allows users to make an appointment with an existing dealer in the system.
+
+## How it works
+The app is built using a html/css handle bar front end and rails-api backend.
+
+## Technologies used
+- Javascript - project logic
+- jQuery - DOM event handling
+- AJAX - interaction with backend API/database
+- handlebars - for displaying user responses in a more organzied format
 
 ## Schedule
 I followed the project 2 schedule below:
