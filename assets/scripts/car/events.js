@@ -17,7 +17,7 @@ const onCreate = event => {
 
 const onIndex = event => {
   event.preventDefault()
-  console.log('onIndex')
+  // console.log('onIndex')
   api.index()
     .then(ui.onIndexSuccess)
     .catch(ui.onIndexFailure)

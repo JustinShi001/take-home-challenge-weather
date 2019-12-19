@@ -24,12 +24,13 @@
         <button id="clearBooksButton" class="btn btn-outline-info">Clear Books!</button>
 
       </div> -->
+      <div class="feedback" id="message"></div>
       <section class="before-auth">
         <!-- <h2>Sign Up </h2> -->
         <form id="sign-up">
           <input type="email" name="credentials[email]" placeholder="email">
-          <input type="password" name="credentials[password]" placeholder="password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
+          <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
+          <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation" autocomplete="on">
           <button class="btn btn-primary">Sign up</button>
         </form>
 
@@ -37,7 +38,7 @@
         <!-- <h2> Sign In</h2> -->
         <form id="sign-in">
           <input type="email" name="credentials[email]" placeholder="email">
-          <input type="password" name="credentials[password]" placeholder="password">
+          <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
           <button class="btn btn-primary">Sign in</button>
         </form>
         </section>
@@ -50,8 +51,8 @@
 
         <section class="after-auth float-right">
           <form id="change-password">
-            <input type="text" name="passwords[old]" placeholder="old password">
-            <input type="text" name="passwords[new]" placeholder="new password">
+            <input type="password" name="passwords[old]" placeholder="old password" autocomplete="on">
+            <input type="password" name="passwords[new]" placeholder="new password" autocomplete="on">
             <button class="btn btn-primary">Change password</button>
           </form>
         </section>
@@ -73,7 +74,7 @@
           </form>
         </section>
 
-        <div id="carMessage"></div>
+        <div class="feedback" id="carMessage"></div>
         <div class="content"></div>
         <section class="after-auth">
           <h2>Show all my favorite cars!</h2>
@@ -83,7 +84,7 @@
           </form>
         </section>
 
-        <div id="carMessage"></div>
+        <div class="feedback" id="carMessage"></div>
         <section class="after-auth">
           <h2>Change a favorite car</h2>
           <form id="change-car">
@@ -94,7 +95,7 @@
           </form>
         </section>
 
-        <div id="carMessage"></div>
+        <div class="feedback" id="carMessage"></div>
         <section class="after-auth">
           <h2>Delete a favorite car</h2>
           <form id="delete-car">
@@ -110,17 +111,17 @@
           <!-- class .text-center -->
           <!-- <h2>What's your favorite car?</h2> -->
           <h2>Create an appointment</h2>
-          <div id="appointmentMessage"></div>
+          <div class="feedback" id="appointmentMessage"></div>
           <form id="create_appointment">
             <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
             <input type="text" name="appointment[date]" placeholder="e.g. 2020-01-01">
-            <input type="text" name="appointment[user_id]" placeholder="user_id">
-            <input type="text" name="appointment[dealer_id]" placeholder="dealer_id">
+            <!-- <input type="text" name="appointment[user_id]" placeholder="user_id"> -->
+            <input type="text" name="appointment[dealer_id]" placeholder="dealer_id (1 or 2)">
             <button class="btn btn-primary">Submit</button>
           </form>
         </section>
 
-        <div id="appointmentMessage"></div>
+        <div class="feedback" id="appointmentMessage"></div>
         <div class="content2"></div>
         <section class="after-auth">
           <h2>Show all my appointments</h2>
@@ -130,19 +131,19 @@
           </form>
         </section>
 
-        <div id="appointmentMessage"></div>
+        <div class="feedback" id="appointmentMessage"></div>
         <section class="after-auth">
           <h2>Change an appointment</h2>
           <form id="change_appointment">
             <input type="text" name="appointment[id]" placeholder="appointment_id">
             <input type="text" name="appointment[date]" placeholder="date, e.g. 2020-01-01">
-            <input type="text" name="appointment[user_id]" placeholder="user_id">
-            <input type="text" name="appointment[dealer_id]" placeholder="dealer_id">
+            <!-- <input type="text" name="appointment[user_id]" placeholder="user_id"> -->
+            <input type="text" name="appointment[dealer_id]" placeholder="dealer_id (1 or 2)">
             <button class="btn btn-primary">Change</button>
           </form>
         </section>
 
-        <div id="appointmentMessage"></div>
+        <div class="feedback" id="appointmentMessage"></div>
         <section class="after-auth">
           <h2>Delete an appointment</h2>
           <form id="delete_appointment">
