@@ -3,6 +3,15 @@
 Link to the Rails API on github:
 https://github.com/JustinShi001/heroku_test
 
+Link to Wireframe and user stories:
+https://imgur.com/ojhap1I
+https://imgur.com/v1xuuAY
+
+## Unresolved problems/future function expansions
+- Still need to be able to search for a dealer based on user zipcode
+- Still need to be able to user comment function to favorite cars
+- Would like to eventually make car recommendations based on a user's created favorite car
+
 ## What the app does
 It's a favorite car web app that allows users to create, view and update their favorite cars.
 It also allows users to make an appointment with an existing dealer in the system.
