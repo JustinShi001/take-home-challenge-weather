@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Favorite Car</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <!-- comment out the following two lines since it's throwing errors in deployed version -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <nav class="float-right">
+
+      <!-- <h1>What's your favorite car?
+      </h1> -->
+
+      <!-- <div class="nav-buttons">
+        <button id="getBooksButton" class="btn btn-info mr-2">Get Books!</button>
+        <button id="clearBooksButton" class="btn btn-outline-info">Clear Books!</button>
+
+      </div> -->
+      <div class="feedback" id="message"></div>
+      <section class="before-auth">
+        <!-- <h2>Sign Up </h2> -->
+        <form id="sign-up">
+          <input type="email" name="credentials[email]" placeholder="email">
+          <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
+          <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation" autocomplete="on">
+          <button class="btn btn-primary">Sign up</button>
+        </form>
+
+        <!-- <div id="message"></div> -->
+        <!-- <h2> Sign In</h2> -->
+        <form id="sign-in">
+          <input type="email" name="credentials[email]" placeholder="email">
+          <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
+          <button class="btn btn-primary">Sign in</button>
+        </form>
+        </section>
+
+        <section class="after-auth float-right">
+          <form>
+            <button id="sign-out" class="btn btn-danger">Sign Out</button>
+          </form>
+        </section>
+
+        <section class="after-auth float-right">
+          <form id="change-password">
+            <input type="password" name="passwords[old]" placeholder="old password" autocomplete="on">
+            <input type="password" name="passwords[new]" placeholder="new password" autocomplete="on">
+            <button class="btn btn-primary">Change password</button>
+          </form>
+        </section>
+      </nav>
+        <!-- Create favorite car section -->
+        <h1>   What's your favorite car?
+        </h1>
+
+        <div class="col-6 col-md-6">
+
+        <section class="after-auth">
+          <!-- class .text-center -->
+          <!-- <h2>What's your favorite car?</h2> -->
+          <form id="create">
+            <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
+            <input type="text" name="favcar[name]" placeholder="e.g. Ford Mustang">
+            <input type="text" name="favcar[year]" placeholder="e.g. 2018">
+            <button class="btn btn-primary">Submit</button>
+          </form>
+        </section>
+
+        <div class="feedback" id="carMessage"></div>
+        <div class="content"></div>
+        <section class="after-auth">
+          <h2>Show all my favorite cars!</h2>
+          <form id="index">
+            <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
+            <button class="btn btn-primary">Show</button>
+          </form>
+        </section>
+
+        <div class="feedback" id="carMessage"></div>
+        <section class="after-auth">
+          <h2>Change a favorite car</h2>
+          <form id="change-car">
+            <input type="number" name="favcar[id]" placeholder="favorite car ID">
+            <input type="text" name="favcar[name]" placeholder="new car name">
+            <input type="text" name="favcar[year]" placeholder="new year e.g. 1999">
+            <button class="btn btn-primary">Change</button>
+          </form>
+        </section>
+
+        <div class="feedback" id="carMessage"></div>
+        <section class="after-auth">
+          <h2>Delete a favorite car</h2>
+          <form id="delete-car">
+            <input type="number" name="favcar[id]" placeholder="favorite car ID">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+        </section>
+        </div>
+
+        <!-- Make an appointment section -->
+        <div class="col-6 col-md-6 border">
+        <section class="after-auth">
+          <!-- class .text-center -->
+          <!-- <h2>What's your favorite car?</h2> -->
+          <h2>Create an appointment</h2>
+          <div class="feedback" id="appointmentMessage"></div>
+          <form id="create_appointment">
+            <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
+            <input type="text" name="appointment[date]" placeholder="e.g. 2020-01-01">
+            <!-- <input type="text" name="appointment[user_id]" placeholder="user_id"> -->
+            <input type="text" name="appointment[dealer_id]" placeholder="dealer_id (1 or 2)">
+            <button class="btn btn-primary">Submit</button>
+          </form>
+        </section>
+
+        <div class="feedback" id="appointmentMessage"></div>
+        <div class="content2"></div>
+        <section class="after-auth">
+          <h2>Show all my appointments</h2>
+          <form id="index_appointment">
+            <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
+            <button class="btn btn-primary">Show</button>
+          </form>
+        </section>
+
+        <div class="feedback" id="appointmentMessage"></div>
+        <section class="after-auth">
+          <h2>Change an appointment</h2>
+          <form id="change_appointment">
+            <input type="text" name="appointment[id]" placeholder="appointment_id">
+            <input type="text" name="appointment[date]" placeholder="date, e.g. 2020-01-01">
+            <!-- <input type="text" name="appointment[user_id]" placeholder="user_id"> -->
+            <input type="text" name="appointment[dealer_id]" placeholder="dealer_id (1 or 2)">
+            <button class="btn btn-primary">Change</button>
+          </form>
+        </section>
+
+        <div class="feedback" id="appointmentMessage"></div>
+        <section class="after-auth">
+          <h2>Delete an appointment</h2>
+          <form id="delete_appointment">
+            <input type="number" name="appointment[id]" placeholder="appointment_id">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+        </section>
+        </div>
+    </body>
+</html>
