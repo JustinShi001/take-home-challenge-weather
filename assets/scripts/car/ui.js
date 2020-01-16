@@ -1,17 +1,17 @@
 'use strict'
 const store = require('../store')
-const showWeatherTemplate = require('../templates/weather-listing.handlebars')
+const showFavcarTemplate = require('../templates/favcar-listing.handlebars')
 
 // const api = require('./api')
 // const gameLogic = require('../logic')
 // let counter = 0
 
-// const onSuccess = (carMessage) => {
-//   $('#carMessage').removeClass('failure')
-//   $('#carMessage').addClass('success')
-//   $('#carMessage').text(carMessage)
-//   $('form').trigger('reset')
-// }
+const onSuccess = (carMessage) => {
+  $('#carMessage').removeClass('failure')
+  $('#carMessage').addClass('success')
+  $('#carMessage').text(carMessage)
+  $('form').trigger('reset')
+}
 
 // const onEnding = carMessage => {
 //   $('#carMessage').removeClass('failure')
@@ -29,39 +29,39 @@ const showWeatherTemplate = require('../templates/weather-listing.handlebars')
 //   onInvalid('Invalid Cell. Please click an empty cell.')
 // }
 
-// const onFailure = carMessage => {
-//   $('#carMessage').removeClass('success')
-//   $('#carMessage').addClass('failure')
-//   $('#carMessage').text(carMessage)
-//   $('form').trigger('reset')
-// }
+const onFailure = carMessage => {
+  $('#carMessage').removeClass('success')
+  $('#carMessage').addClass('failure')
+  $('#carMessage').text(carMessage)
+  $('form').trigger('reset')
+}
 
-// const onCreateSuccess = (response) => {
-//   store.favcar = response.favcar
-//   // store.gameover = false
-//   // store.step = 0
-//   // counter = 0
-//   onSuccess('You successfully created a favorite car!')
-//   // console.log(response)
-//   $('.container').show()
-//   $('p').remove()
-//   $('.box').addClass('alt-color')
-// }
-// const onCreateFailure = (response) => {
-//   onFailure('Rut roh... somgthing went wrong! try again')
-// }
+const onCreateSuccess = (response) => {
+  store.favcar = response.favcar
+  // store.gameover = false
+  // store.step = 0
+  // counter = 0
+  onSuccess('You successfully created a favorite car!')
+  // console.log(response)
+  $('.container').show()
+  $('p').remove()
+  $('.box').addClass('alt-color')
+}
+
+const onCreateFailure = (response) => {
+  onFailure('Rut roh... somgthing went wrong! try again')
+}
 
 const onIndexSuccess = (response) => {
-  store.formdata = response.formdata
+  store.favcars = response.favcars
   // console.log(response)
   $('.content').show()
-  const showWeatherHtml = showWeatherTemplate({ weather: response.weather })
-  // onSuccess('Your updated one of your favorite car!')
-  $('.content').html(showWeatherHtml)
+  const showFavcarHtml = showFavcarTemplate({ favcars: response.favcars })
+  $('.content').html(showFavcarHtml)
 }
-// const onIndexFailure = (response) => {
-//   onFailure('Rut roh... somgthing went wrong! try again')
-// }
+const onIndexFailure = (response) => {
+  onFailure('Rut roh... somgthing went wrong! try again')
+}
 // const onShowSuccess = (response) => {
 //   store.favcars = response.favcars
 //   onSuccess(store.favcars[0].name)
@@ -69,33 +69,34 @@ const onIndexSuccess = (response) => {
 // const onShowFailure = (response) => {
 //   onFailure('Rut roh... somgthing went wrong! try again')
 // }
-// const onUpdateSuccess = (response) => {
-//   // console.log(response)
-//   store.favcar = response.favcar
-//   onSuccess('Your updated one of your favorite car!')
-//   $('.content').hide()
-// }
-// const onUpdateFailure = (response) => {
-//   onFailure('Rut roh... somgthing went wrong! try again')
-// }
-// const onDestroySuccess = (response) => {
-//   onSuccess('Your just destroyed one of your favorite car!')
-//   $('.content').hide()
-// }
-// const onDestroyFailure = (response) => {
-//   onFailure('Rut roh... somgthing went wrong! try again')
-// }
+const onUpdateSuccess = (response) => {
+  // console.log(response)
+  store.favcar = response.favcar
+  onSuccess('Your updated one of your favorite car!')
+  $('.content').hide()
+}
+const onUpdateFailure = (response) => {
+  onFailure('Rut roh... somgthing went wrong! try again')
+}
+
+const onDestroySuccess = (response) => {
+  onSuccess('Your just destroyed one of your favorite car!')
+  $('.content').hide()
+}
+const onDestroyFailure = (response) => {
+  onFailure('Rut roh... somgthing went wrong! try again')
+}
 
 module.exports = {
-  // // onCreateSuccess,
-  // onCreateFailure,
-  onIndexSuccess
-  // onIndexFailure,
+  onCreateSuccess,
+  onCreateFailure,
+  onIndexSuccess,
+  onIndexFailure,
   // onShowSuccess,
   // onShowFailure
-  // onUpdateSuccess,
-  // onUpdateFailure,
-  // onDestroySuccess,
-  // onDestroyFailure
+  onUpdateSuccess,
+  onUpdateFailure,
+  onDestroySuccess,
+  onDestroyFailure
   // onInvalidSpace
 }
