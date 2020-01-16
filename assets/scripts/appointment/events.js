@@ -6,21 +6,21 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 // const store = require('../store')
 // let player = 'x'
 
-const onCreate = event => {
+const onCreateApp = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  api.create(formData)
-    .then(ui.onCreateSuccess)
-    .catch(ui.onCreateFailure)
+  api.createApp(formData)
+    .then(ui.onAppCreateSuccess)
+    .catch(ui.onAppCreateFailure)
 }
 
-const onIndex = event => {
+const onIndexApp = event => {
   event.preventDefault()
-  // console.log('onIndex')
-  api.index()
-    .then(ui.onIndexSuccess)
-    .catch(ui.onIndexFailure)
+  // console.log('onIndexApp')
+  api.indexApp()
+    .then(ui.onAppIndexSuccess)
+    .catch(ui.onAppIndexFailure)
 }
 // const onShow = event => {
 //   event.preventDefault()
@@ -28,24 +28,24 @@ const onIndex = event => {
 //     .then(ui.onShowSuccess)
 //     .catch(ui.onShowFailure)
 // }
-const onUpdate = event => {
+const onUpdateApp = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
 
-  api.update(formData)
-    .then(ui.onUpdateSuccess)
-    .catch(ui.onUpdateFailure)
+  api.updateApp(formData)
+    .then(ui.onAppUpdateSuccess)
+    .catch(ui.onAppUpdateFailure)
 }
 
-const onDelete = event => {
+const onDeleteApp = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
 
-  api.destroy(formData)
-    .then(ui.onDestroySuccess)
-    .catch(ui.onDestroyFailure)
+  api.destroyApp(formData)
+    .then(ui.onAppDestroySuccess)
+    .catch(ui.onAppDestroyFailure)
 }
 // //   if ($(event.target).html() === '<p>x</p>' || $(event.target).html() === '<p>o</p>' ||
 // //       $(event.target).html() === 'x' || $(event.target).html() === 'o') {
@@ -73,11 +73,11 @@ const onDelete = event => {
 
 // list event listeners and event handlers below:
 const addHandlers = event => {
-  $('#create').on('submit', onCreate)
-  $('#index').on('submit', onIndex)
+  $('#create_appointment').on('submit', onCreateApp)
+  $('#index_appointment').on('submit', onIndexApp)
   // $('#show').on('submit', onShow)
-  $('#change-car').on('submit', onUpdate)
-  $('#delete-car').on('submit', onDelete)
+  $('#change_appointment').on('submit', onUpdateApp)
+  $('#delete_appointment').on('submit', onDeleteApp)
 }
 module.exports = {
   addHandlers
